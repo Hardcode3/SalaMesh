@@ -11,3 +11,5 @@ Each mesh has different object files describing either the slice, the horizons o
 The attributes.py file contains preprocessed data about horizon's and fault's edges.
 
 ### Files
+
+![img](example/ifp2.jpg)
