@@ -12,4 +12,4 @@ The attributes.py file contains preprocessed data about horizon's and fault's ed
 
 ### Files
 
-![img](example/ifp2.jpg)
+![img](examples/ifp2.jpg)
