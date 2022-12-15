@@ -32,19 +32,23 @@ In our work, we mainly:
 ### Poisson's probem
 First the mesh has to be smoothed in order to show regular triangles.
 For this, Poisson's equation has been implemented. 
-We minimized the difference of distances between the current edge lenght and the processed one. It was done for the x, and y coordinates. 
+We minimized the difference of distances between the current edge lenght and the processed one. It was done for the x, and y coordinates.
 
 ### Constraints
+#### On horizons
+##### Horizontalizing geological layers
+In order to make geological horizons flat, the y-coordinate variation between the origin and destination vertices for eatch edge of the horizon was minimized. This lead to the following result:
+![ifp1_horizon](evolution/ifp1_horizon.png)
+
 #### On faults
-Concerning the fault, the aim is to minimize the x coordinate variation between the orign and destination vertices for each edge of the fault. With this condition the faults were verticalized. 
-An other condition must be added to prevent the connexe component from spliting. The connexe components were joined by minimizing the x distance between an edge and its opposite, the same was done for the y coordinate:
+##### Verticalizing faults
+Concerning the fault, the aim is to minimize the x coordinate variation between the orign and destination vertices for each edge of the fault. With this condition the faults were verticalized.
 ![connexe_components](evolution/ifp1_connexe_split.png)
 
-#### On horizons
+##### Joining connexe components
+An other condition must be added to prevent the connexe component from spliting. The connexe components were joined by minimizing the x distance between an edge and its opposite, the same was done for the y coordinate.
 
-## Issues
-
-## Results
+## Final results
 ### chevron
 
 ![chevron_img](evolution/chevron.png)
