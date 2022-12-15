@@ -37,7 +37,8 @@ We minimized the difference of distances between the current edge lenght and the
 ### Constraints
 #### On faults
 Concerning the fault, the aim is to minimize the x coordinate variation between the orign and destination vertices for each edge of the fault. With this condition the faults were verticalized. 
-An other condition must be added to prevent the connexe component from spliting. The connexe components were joined by minimizing the x distance between an edge and its opposite, the same was done for the y coordinate. 
+An other condition must be added to prevent the connexe component from spliting. The connexe components were joined by minimizing the x distance between an edge and its opposite, the same was done for the y coordinate:
+![connexe_components](evolution/ifp1_connexe_split.png)
 
 #### On horizons
 
