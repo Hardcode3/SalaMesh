@@ -52,7 +52,7 @@ For this, Poisson's equation has been implemented.
 
 ### shell
 
-![shell_img](evolution/shell.png)
+![shell_img](evolution/shell.PNG)
 
 ## Conclusion
 
