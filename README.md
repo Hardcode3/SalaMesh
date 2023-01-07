@@ -3,7 +3,7 @@
 ## Overview
 **A python geological mesh software to verticalize and horizontalize faults and horizons.**
 This work is based on the [least squares lecture of Dmitri Sokolov](https://github.com/ssloy/least-squares-course).
-The work is done is described in the [following repository](https://github.com/ssloy/ENSG.git).
+The work done is described in the [following repository](https://github.com/ssloy/ENSG.git).
 See [main](main.py) for more details.
 
 ### Meshes
