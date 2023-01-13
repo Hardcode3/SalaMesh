@@ -7,8 +7,8 @@ The work done is described in the [following repository](https://github.com/sslo
 See [main](main.py) for more details.
 
 ### Meshes
-There are foud geological slices called [chevron](chevron), [ifp1](ifp1), [ifp2](ifp2) and [shell](shell).
-These slices describe a 2D geological model having zero or more faults and some horizons.
+There are four geological slices called [chevron](chevron), [ifp1](ifp1), [ifp2](ifp2) and [shell](shell).
+These slices describe 2D geological models having zero or more faults and some horizons.
 Each mesh has different object files describing either the slice, the horizons or the set of faults.
 Slices can have different connex components.
 The attributes.py files contains preprocessed data about horizon's and fault's edges.
@@ -24,33 +24,33 @@ We processed the mesh using the following scheme, for each dimension (x, y):
 5. Write output mesh
 
 ## Least squares
-Editing the mesh amounts to minimizing energy functions. Hence we use least square's formulation for our problem.
+Editing the mesh amounts to minimizing energy functions. Hence, we use least square's formulation for our problem.
 In our work, we mainly:
 - Optimized the triangles using Poisson's equation
-- Minimized distance between some verticie's positions (for faults and horizons)
-- Lower / raise verticies (for visualisation purposes)
+- Minimized distance between some vertice's positions (for faults and horizons)
+- Lower / raise vertices (for visualization purposes)
 
-### Poisson's probem
+### Poisson's problem
 First the mesh has to be smoothed in order to show regular triangles.
 For this, Poisson's equation has been implemented. 
-We minimized the difference of distances between the current edge lenght and the processed one. It was done for the x, and y coordinates.
+We minimized the difference of distances between the current edge length and the processed one. It was done for the x, and y coordinates.
 ![ifp1_base](evolution/ifp1_base.png)
 
 ### Constraints
 #### On horizons
 ##### Horizontalizing geological layers
-In order to make a geological horizon flat, the y-coordinate variation between the origin vertice and a reference point belonging to this geological  vertices for eatch edge was minimized. The process has been repeated for each horizon, leading to the following result:
+In order to make a geological horizon flat, the y-coordinate variation was minimized, between a reference point and the origin vertice of each edge. The process has been repeated for each horizon, leading to the following result:
 ![ifp1_horizon](evolution/ifp1_horizon.png)
 
 #### On faults
 ##### Verticalizing faults
-Concerning the fault, the aim is to minimize the x coordinate variation between the orign and destination vertices for each edge of the fault. With this condition the faults were verticalized.
+Concerning the fault, the aim is to minimize the x coordinate variation between the origin and destination vertices for each edge of the fault. With this condition the faults were verticalized.
 ![connexe_components](evolution/ifp1_connexe_split.png)
 
 ##### Joining connexe components
-An other condition must be added to prevent the connexe component from spliting. The connexe components were joined by minimizing the x distance between an edge and its opposite, the same was done for the y coordinate.
+Another condition must be added to prevent the connexe component from splitting. The connexe components were joined by minimizing the x distance between an edge and its opposite along the fault, the same was done for the y coordinate.
 
-By applying together the minimisations mentioned above, the following results are obtained: 
+By applying together the minimizations mentioned above, the following results are obtained: 
 ###### ifp1
 
 ![ifp1_img](evolution/ifp1.png)
@@ -66,5 +66,4 @@ By applying together the minimisations mentioned above, the following results ar
 
 ![shell_img](evolution/shell.PNG)
 
-## Conclusion
 
